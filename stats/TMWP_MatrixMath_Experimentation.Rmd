@@ -1,0 +1,161 @@
+---
+title: "TMWP_MatrixMath_Experimentation.Rmd"
+author: "Created by Mitch, github ID: TheMitchWorksPro"
+date: "March 20, 2017"
+output: html_document
+---
+
+```{r firstCell, eval=FALSE, echo=FALSE}
+
+# files to load (when created):  
+#   to reload environment with variables and previously run output:
+#   load("tbd.RData")  # recreates the working environment (assuming we saved it)
+
+```
+
+### TOC
+
+In this document:
+
+  - [Outer Product Experiment - Numeric Vector](#problem1)
+  - [Outer Product Experiment - Character Vector](#problem1b)
+  - [Inner Product Experiment - Numeric Vector](#problem2)
+
+<a id="problem1" name="problem1"></a>
+
+### Outer Product Experiment One - Numeric Vectors
+
+These cells test some [outer product code from a post on nabble.com](http://r.789695.n4.nabble.com/Outer-product-from-matrix-by-row-and-a-vector-td4639525.html). Then we conduct some experiments with it.  [This link](https://stat.ethz.ch/R-manual/R-devel/library/base/html/matmult.html) was also helpful for code that comes later in this document.
+
+```{r problem1StartsHere, echo=TRUE, eval=TRUE}
+
+# http://r.789695.n4.nabble.com/Outer-product-from-matrix-by-row-and-a-vector-td4639525.html
+
+# code from stack overflow ... only varaible names have been altered
+# this is just a test to understand the code
+
+aVec <- matrix(c(1:6),ncol=3)
+aVec
+bVec <- c(1,2,3,4)
+bVec 
+out <- aVec[, 1] + aVec[, 3] %o% (1/bVec)
+out
+
+result <- matrix(rep(0, times=dim(aVec)[1]*length(bVec)),nrow=dim(aVec)[1]) 
+  # this buildes a vector full of zeroes probably of desired dimensions 
+  # for next steps ...
+
+result
+
+```
+
+```{r soexamplecont2}
+for(ii in 1:dim(aVec)[1]){ 
+  for(jj in 1:length(bVec)){ 
+    result[ii,jj] <- aVec[ii,1]+aVec[ii,3]/bVec[jj] 
+  } 
+} 
+
+max(abs(out - result))
+
+```
+
+```{r soexamplecont4}
+identical( t( apply(aVec, 1, function(x) { x[1] + x[3]/ bVec } ) ), result) 
+
+```
+
+Now we try to build our own.  This code requires a numeric vector as input, so this version explores the outer product code using numeric vectors:
+
+```{r myCell1_pasteNums, echo=TRUE, eval=TRUE}
+
+paste_nums <- function(number_vec) {
+  # do something here
+  return(t(as.matrix(number_vec)) %o% as.matrix(number_vec)) 
+}
+
+myVec1 <- c(1, 2, 3)
+myVec1
+
+```
+
+```{r pastenums2}
+outObj <- paste_nums(myVec1)
+outObj
+
+```
+
+To get the sum of the outer product, we could just do this:
+```{r pastenums3}
+sum(paste_nums(myVec1))
+
+```
+
+<a id="problem1b" name="problem1b"></a>
+
+### Outer Product Experiment Two - Character Vector
+
+but how do we do it to a character vec like: 'a', 'b', 'c'? The above code works with numbers only.
+Desired output is like "outObj" but on our character vector.  First a quick experiment
+
+```{r textExp1}
+
+myVec2 <- c('a', 'b', 'c')
+myVec2
+
+paste("text", myVec2)
+
+```
+
+this solution uses an [sappy](http://stackoverflow.com/questions/3505701/r-grouping-functions-sapply-vs-lapply-vs-apply-vs-tapply-vs-by-vs-aggrega) function mapping to achieve the same effect with a text vector:
+```{r charOutsolution1}
+
+paste_chars <- function(char_vec) {
+    return(sapply(char_vec, paste, arg1=char_vec, sep=""))
+}
+
+paste_chars(myVec2)
+
+```
+
+more testing of our solution ... outer product of a character vector w/ itself ...
+
+```{r charVecSolutionCell2}
+
+myVec3 <- c('x', 'y', 'z', 'a', 'n', 'g', 'word')
+myVec3
+
+paste_chars(myVec3)
+
+```
+
+<a id="problem2" name="problem2"></a>
+
+### Inner Product - Numeric
+
+
+`%i%` is not valid and `%in%` means find the values of one vector within another returning a boolean vector of which values were found.  So how do we do inner product?
+
+```{r inTest1}
+aVec2 <- matrix(c(1:6),ncol=3)
+aVec2
+bVec2 <- matrix(c(6:11), ncol=2)
+bVec2
+
+library(grDevices)
+inProd <- aVec2 %*% bVec2
+inProd
+
+```
+
+A quick explanation of matrix math performed above:
+
+ (1\*6) + (3\*7) + (5\*8) = *67* &nbsp;&nbsp;&nbsp;&nbsp; (1\*9) + (3\*10) + (5\*11) =  *94*  
+ (2\*6) + (4\*7) + (6\*8) = *88* &nbsp;&nbsp;&nbsp;&nbsp; (2\*9) + (4\*10) + (6\*11) = *124*  
+
+```{r finalAnswerInnerProd}
+# inner product
+sum(inProd)
+
+```
+
