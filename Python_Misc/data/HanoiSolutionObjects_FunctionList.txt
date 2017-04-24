@@ -1,0 +1,27 @@
+Function list last updated: 4.24.2017
+
+HanoiSolution
+def __init__(self, numDisks, moveList="Visual", divider=30):
+def _moveDisks(self, nDisks, source, target, auxiliary, moveList): 
+def _diskMovementProgression(self, nDisks, source, target, moveList):
+def _output_diskProgress(self, nDisks, source, target, moveList):
+def reInitialize(self, nDisks, moveList, divider=30):
+def __str__(self):
+
+HanoiStoredSolution:
+
+def __init__(self, numDisks, moveList="Stored", divider=30):
+def _store_diskProgress(self, dsk, sourceID, targetID):
+def _diskMovementProgression(self, nDisks, source, target, moveList="Visual"):
+def get_solutionDF(self):
+
+HanoiStoredSolutionTron:
+
+def __init__(self, numDisks, moveList="Stored", divider=30):
+def _moveDisks(self, nDisks, source, target, auxiliary, moveList): 
+def _diskMovementProgression(self, nDisks, source, target, moveList="Visual"):
+def _store_diskProgress(self, dsk, sourceID, targetID):
+def _output_diskProgress(self, nDisks, source, target, moveList):
+def reInitialize(self, nDisks, moveList, divider=30):
+def __str__(self):
+def get_solutionDF(self):

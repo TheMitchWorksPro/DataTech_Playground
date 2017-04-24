@@ -1,0 +1,12 @@
+# ignore part of project
+*.html linguist-vendored
+
+# consider part of project documentation
+stats/* linguist-documentation
+*.md
+
+# consider these parts for what language this project is
+*.py linguist-language=python
+*.ipynb linguist-language=python
+*.r linguist-language=r
+*.rmd linguist-language=r
