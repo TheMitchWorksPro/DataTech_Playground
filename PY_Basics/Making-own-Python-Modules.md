@@ -28,8 +28,7 @@ Please check out: http://continuum.io/thanks and https://anaconda.org
 
 >>> import sys
 
->>> sys.path.append(r'C:\Users\Mitch\Documents\a_MLA\MLA\Code\education\Python\Jupyter_NBs\a_GitProjx\Python_in_Plain_En
-glish')
+>>> sys.path.append(r'C:...\Python\Jupyter_NBs\a_GitProjx\Python_in_Plain_English')
 
 >>> import string_and_array_functions as myFun
 
