@@ -1,7 +1,8 @@
 This demo is mostly screen dumps from a command line test in which the python module "string_and_array_functions.py"
 is set up so its functions become callable within the active Python environment.  Note that this configuration, if
-re-created, makes the functions available all the time (is is for a permanent setup).  Though the test was done at
-the command line, it was to set the module up to work with an Anaconda distribution if Jupyter/iPython. 
+re-created, makes the functions available all the time (it is for a permanent setup).  Though the test was done at
+the command line, it also makes the functions work with an Anaconda distribution if Jupyter/iPython.  Folder paths
+need to be edited as appropriate for your machine when using this content as a model. 
 <br/>
 The example includes how to give the user a version #.  This help topic is useful for making modules and 
 setting up the version #:<br/>
