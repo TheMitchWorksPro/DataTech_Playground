@@ -15,6 +15,7 @@ This is an unfinished preliminary version.  Here are the points of interest in i
   - etc.
 - [Calculating Inner and Outer Products w/ R]( http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
 - [Python Basics](./PY_Basics) - Helpful Topics on Basics and Functioning of the Python Programming Language
+  - [Experiment / Walkthrough w/ Multiple Pythonic Concepts](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/PY_Basics/TMWP_Num_Seq_As_Num_Experiment.ipynb) - includes list comprehensions, map(), reduce(), testing type(), etc.
 
 
 
