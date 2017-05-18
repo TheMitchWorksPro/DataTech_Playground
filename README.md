@@ -13,15 +13,10 @@ This is an unfinished preliminary version.  Here are the points of interest in i
   - FileData object, 
   - Normal Distr. Plot with Probability Calc function, 
   - etc.
+- Misc. R Code:
 - [Calculating Inner and Outer Products w/ R]( http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
 - [Python Basics](./PY_Basics) - Helpful Topics on Basics and Functioning of the Python Programming Language
-  - [Experiment / Walkthrough w/ Multiple Pythonic Concepts](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/PY_Basics/TMWP_Num_Seq_As_Num_Experiment.ipynb) - includes list comprehensions, map(), reduce(), testing type(), etc.
-
+- [Python Basics - Walkthroughs and Inegrated Concepts](./PY_Basics/Walkthroughs) - Documents illustrating several connected things at once
 
 
 ![Mitch](https://github.com/TheMitchWorksPro/TestProject/blob/master/html_mitch_logo/Mitch_LogoBG.gif)
-
-
-```python
-
-```

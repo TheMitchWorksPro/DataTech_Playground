@@ -91,7 +91,7 @@ def isPalindrome(inputString):
 # alternative to above function from Stack Overflow:
 
 def is_palindromic(s):
-    """Another way to test if a string is a Palindrome using tilde operator 
+    """Another way to test if a string is a Palindrome using tilde (not) operator 
 	   source: http://stackoverflow.com/questions/8305199/the-tilde-operator-in-python  
 	"""
     return all(s[i] == s[~i] for i in range(len(s) / 2))
@@ -129,7 +129,11 @@ def print_ArrayElements(myArray):
             # element was counted before error thrown
             print "Element %d: %s" % (count, i)
 
+			
+def convert_win_path_to_onlinePath(inputURL):
+    '''convert windows file path string to browser or UNIX compatible syntax.'''
+    return inputURL.replace("\\", "/")
 	
-# Related research to next function:
+# Related research:
 #   https://www.tutorialspoint.com/python/string_join.htm	
 #   https://wiki.python.org/moin/PythonSpeed/PerformanceTips#String_Concatenation

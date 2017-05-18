@@ -1,16 +1,20 @@
 This demo is mostly screen dumps from a command line test in which the python module "string_and_array_functions.py"
 is set up so its functions become callable within the active Python environment.  Note that this configuration, if
-re-created, makes the functions available all the time (it is for a permanent setup).  Though the test was done at
-the command line, it also makes the functions work with an Anaconda distribution if Jupyter/iPython.  Folder paths
-need to be edited as appropriate for your machine when using this content as a model. 
+re-created, makes the functions available just for the current session.  Though the test was done at
+the command line, it also worked in a Jupyter/iPython notebook on an Anaconda distribution as well.  Folder paths
+need to be edited as appropriate for your machine when using this content as a model.  You can find the PY file in the
+folder on this project called "PY_Misc", and then once you download the file into a folder on your system to use,
+you can use your folder path with the rest of what is shown here to do your own python module test. 
 <br/>
-The example includes how to give the user a version #.  This help topic is useful for making modules and 
-setting up the version #:<br/>
+Before we begin, here are some useful help topics for both the test shown here, and for looking at making 
+the access to the python module more permanent.<br/>
 <br/>
 https://www.ibiblio.org/g2swap/byteofpython/read/making-modules.html<br/>
 <br/>
 This topic for making modules permanently accessible by your environment:<br/>
-http://stackoverflow.com/questions/7472436/add-a-directory-to-python-sys-path-so-that-its-included-each-time-i-use-python<br/>
+http://stackoverflow.com/questions/7472436/add-a-directory-to-python-sys-path-so-that-its-included-each-time-i-use-python
+<br/>And this one:
+http://stackoverflow.com/questions/448271/what-is-init-py-for
 <br/>
 
 Sample from Windows Powershell window - 1/9/2017:<br/>
@@ -29,7 +33,7 @@ Please check out: http://continuum.io/thanks and https://anaconda.org
 
 >>> import sys
 
->>> sys.path.append(r'C:...\Python\Jupyter_NBs\a_GitProjx\Python_in_Plain_English')
+>>> sys.path.append(r'C:...\Jupyter\Python\PY_Files')
 
 >>> import string_and_array_functions as myFun
 
