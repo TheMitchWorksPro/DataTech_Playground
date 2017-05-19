@@ -4,3 +4,4 @@ Git-*.sh
 Thumbs.db
 .ipynb_checkpoints
 __init__.py
+*.pyc
