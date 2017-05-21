@@ -21,6 +21,7 @@ This is an unfinished preliminary version.  Here are the points of interest in i
 - [Python Basics](./PY_Basics) - Helpful Topics on Basics and Functioning of the Python Programming Language
   - includes topics on OO, indexing into data structures, list comprehensions, map/reduce/lambda, etc.
   - [Folder of String, Array, and Print related topics](./PY_Basics/str_arr_lst_prnt)
+  - [Folder w Keyword Lists and Related Topics](./PY_Basics/kwrds)
 - [Python Basics - Walkthroughs and Inegrated Concepts](./PY_Basics/Walkthroughs) - Documents illustrating several connected things at once
 
 ## R Code
