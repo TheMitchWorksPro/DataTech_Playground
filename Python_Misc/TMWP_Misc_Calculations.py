@@ -54,3 +54,15 @@ def convertTemp(temperature, t_in='F', t_out='C'):
 	else:
 	    raise ValueError("Incorrect Arguments for function convertTemp(temperature, t_in='F', t_out='C'")
 
+def isPrime(n):
+    if n == 1 or n == 0:
+        return False
+    if n == 2 or n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    sq = math.ceil(math.sqrt(n))
+    for x in range(3, sq+1, 2):
+        if n % x == 0:
+            return False
+    return True
