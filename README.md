@@ -26,6 +26,7 @@ This is an unfinished preliminary version.  Here are the points of interest in i
 
 ## R Code
 - [Calculating Inner and Outer Products w/ R]( http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
+- [Revisit Testing for Magic Squares in R](./R_Misc/)
 
 ## Other
 Explore this project for other useful learning content to aspiring Data Scientists, Coders, and Analysts.

@@ -66,3 +66,12 @@ def isPrime(n):
         if n % x == 0:
             return False
     return True
+	
+def line_slope(xyPt1, xyPt2):
+    '''line_slope() --> Input point 1 as [x, y] and point 2 as [x2, y2] and this calculates slope for the line. '''
+	# slope = rise over run
+	x1 = xyPt1[0]
+	y1 = xyPt1[1]
+	x2 = xyPt2[0]
+	y2 = xyPt2[1]
+    return (y2 - y1) / (x2 - x1)	
