@@ -5,3 +5,4 @@ Thumbs.db
 .ipynb_checkpoints
 __init__.py
 *.pyc
+.DS_Store
