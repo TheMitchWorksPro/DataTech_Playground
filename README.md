@@ -1,5 +1,6 @@
 
-<div align="right">Python [conda root] v2.7</div>
+<div align="right">Python [conda] v2.7 & 3.6</div><br/>
+<div align="right">R</div>
 
 # DataTech Playground
 
@@ -33,3 +34,17 @@ This is an unfinished preliminary version.  Here are the points of interest in i
 Explore this project for other useful learning content to aspiring Data Scientists, Coders, and Analysts.
 
 ![Mitch](https://github.com/TheMitchWorksPro/TestProject/blob/master/html_mitch_logo/Mitch_LogoBG.gif)
+
+<!--
+
+   Link testing: can't display notebooks yet ...
+   http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/R_Misc/R_MagicSquare_Exploration.ipynb
+   https://nbviewer.jupyter.org/github.com/TheMitchWorksPro/DataTech_Playground/blob/master/R_Misc/R_MagicSquare_Exploration.ipynb
+
+   https://render.githubusercontent.com/view/ipynb?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/R_Misc/R_MagicSquare_Exploration.ipynb
+
+   Issue: 
+
+   https://render.githubusercontent.com/view/ipynb?commit=24a4a32ee885d4ceb6166c83331decc2a44ed900&enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f5468654d69746368576f726b7350726f2f44617461546563685f506c617967726f756e642f323461346133326565383835643463656236313636633833333331646563633261343465643930302f525f4d6973632f525f4d616769635371756172655f4578706c6f726174696f6e2e6970796e62&nwo=TheMitchWorksPro%2FDataTech_Playground&path=R_Misc%2FR_MagicSquare_Exploration.ipynb&repository_id=87484008&repository_type=Repository#ff6e4cb6-05b3-43c9-96d8-3117f999122f
+
+-->
