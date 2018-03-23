@@ -25,8 +25,9 @@ This is an unfinished preliminary version.  Here are the points of interest in i
 - [Python Basics - Walkthroughs and Inegrated Concepts](./PY_Basics/Walkthroughs) - Documents illustrating several connected things at once
 
 ## R Code
-- [Calculating Inner and Outer Products w/ R]( http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
+- [Calculating Inner and Outer Products w/ R](http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
 - [Revisit Testing for Magic Squares in R](./R_Misc/)
+- [Craps Game Simulation in R](http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/R_Misc/TMWP_CrapsGameSimulation_R.html)
 
 ## Other
 Explore this project for other useful learning content to aspiring Data Scientists, Coders, and Analysts.
