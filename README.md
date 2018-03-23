@@ -4,9 +4,9 @@
 
 # DataTech Playground
 
-This project is a test bed for experimentation and creation of data analytics and data science related content.  It is evolving and will contain statistics and data analysis help content files, Python code, and R code.
+This project is a test bed for experimentation and creation of data analytics and data science related content.  It is evolving and may contain statistics and data analysis help content files, Python code, and R code for students and aspiring Data Scientists.  In truth though, all data students are forever students as there is always more to learn.
 
-This is an unfinished preliminary version.  Here are the points of interest in it so far:
+This is still a preliminary version.  Here are the points of interest in it so far:
 
 ## Python
 
