@@ -24,11 +24,13 @@ This is still a preliminary version.  Here are the points of interest in it so f
   - [Folder of String, Array, and Print related topics](./PY_Basics/str_arr_lst_prnt)
   - [Folder w Keyword Lists and Related Topics](./PY_Basics/kwrds)
 - [Python Basics - Walkthroughs and Inegrated Concepts](./PY_Basics/Walkthroughs) - Documents illustrating several connected things at once
+- [Python Screen Scraping and Data Analysis Project](https://github.com/TheMitchWorksPro/NYCDSA_CR_WebScrape)
 
 ## R Code
 - [Calculating Inner and Outer Products w/ R](http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/stats/TMWP_MatrixMath_Experimentation.html)
 - [Revisit Testing for Magic Squares in R](./R_Misc/)
 - [Craps Game Simulation in R](http://htmlpreview.github.com/?https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/R_Misc/TMWP_CrapsGameSimulation_R.html)
+- [R Shiny Project using Movie Data](https://github.com/TheMitchWorksPro/NYCDSA_TMWP_Shiny)
 
 ## Other
 Explore this project for other useful learning content to aspiring Data Scientists, Coders, and Analysts.
