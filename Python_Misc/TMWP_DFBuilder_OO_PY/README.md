@@ -14,8 +14,8 @@ The abstract class sets up the core logic and subclasses add in functions to mod
 ## More Documentation, Examples and Testing
 Final test Jupyter notebooks have been edited to show examples of how to use the classes and their methods.  This content is chock full of examples while showing the final tests that verify the code works.  This content displays better in Jupyter Notebooks than on Git due to wider display margins. But you can view this content here, or download it for use:
 
-- [Testing_and_Documentation](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/Python_Misc/TMWP_DFBuilder_OO_PY/testing_and_documentation)
-- [Test Data](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/Python_Misc/TMWP_DFBuilder_OO_PY/testing_and_documentation/data)
+- [/Testing_and_Documentation](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/Python_Misc/TMWP_DFBuilder_OO_PY/testing_and_documentation)
+- [/Testing_and_Documentation/Test Data](https://github.com/TheMitchWorksPro/DataTech_Playground/blob/master/Python_Misc/TMWP_DFBuilder_OO_PY/testing_and_documentation/data)
 
 
 
