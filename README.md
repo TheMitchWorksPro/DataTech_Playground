@@ -1,6 +1,6 @@
 
-<div align="right">Python [conda] v2.7 & 3.6</div><br/>
-<div align="right">R</div>
+<div align="right">Python [conda] v2.7 & 3.6 <br/>
+R </div>
 
 # DataTech Playground
 
@@ -17,6 +17,7 @@ This is still a preliminary version.  Here are the points of interest in it so f
   - testing for magic squares (w/ numpy),
   - OO Towers of Hanoi Solution Code and related research
   - FileData object, 
+  - [Abstract object to interact with Web and subclass to make Google Maps calls](./Python_Misc/TMWP_DFBuilder_OO_PY)
   - Normal Distr. Plot with Probability Calc function, 
   - etc.
 - [Python Basics](./PY_Basics) - Helpful Topics on Basics and Functioning of the Python Programming Language
