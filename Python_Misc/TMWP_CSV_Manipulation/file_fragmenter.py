@@ -21,11 +21,12 @@ class CsvSplitterAbs(object, metaclass=ABCMeta):
         ## parse named arguments from command line
         self.parser = argparse.ArgumentParser()
         self.parser.add_argument('--input', '-i', help="intput file", type= str)
-        self.parser.add_argument('--input_index', '-idx', help="enter true or false for has indes column", type=bool, default=False)
-        self.parser.add_argument('--numRows', '-rw', help="number rows in each output file after splitting the intput file", type=int, default=1000)
+        self.parser.add_argument('--input_index', '-idx', help="enter True if inputs have an index / Omit this argument if they don't", type=bool, default=False)
+        self.parser.add_argument('--numRows', '-rw', help="number rows in each output file after splitting the intput file", type=int, default=10000)
         self.parser.add_argument('--outputStart', '-o', help="output file name starts with this string", type= str)
-        self.parser.add_argument('--output_index', '-odx', help="enter true or false for whether to output an index column", type=bool, default=False)
+        self.parser.add_argument('--output_index', '-odx', help="enter true to output an index / Omit this argument to leave off the index", type=bool, default=False)
         self.args=self.parser.parse_args()
+        self.pyVer = "3.6.1"
 
         self.tmpDF = pd.DataFrame()   # holds entire input file when 
         self.tmpDF2 = pd.DataFrame()  # DF to get overwritten by each file fragment
@@ -33,28 +34,35 @@ class CsvSplitterAbs(object, metaclass=ABCMeta):
     def split_file(self):
         ## input file controls:
         if self.args.input_index == True:
-            tDF_index_col = 0      ## does input file have index column (with labels for each row)?
+            tDF_input_index_col = 0      ## does input file have index column (with labels for each row)?
         else:
-            tDF_index_col = False
+            tDF_input_index_col = False
 
         inFileToSplit = self.args.input
           ## Example: "TestFileSmall2.csv"
 
+        print("Input files to split: ", inFileToSplit)
+        print("args.input_index is set to:", str(type(self.args.input_index)), self.args.input_index)
+        print("args.output_index is set to:", str(type(self.args.output_index)), self.args.output_index)
+
+
         ## output file controls
         numRows = self.args.numRows         ## 10  ##  10000                       ## rows to include in each subset
         fileStart = self.args.outputStart   ## "TestFlFrag"    #"tempSet"          ## file name for output (numbers and .csv for each file will be added by the code)
-        tDF2_index_label = self.args.output_index                                  ## true outputs the index (row labels)
+        tDF_output_index = self.args.output_index                                  ## true outputs the index (row labels)
 
         self.tmpDF = pd.read_csv(inFileToSplit, 
-                            index_col=tDF_index_col, low_memory=False) 
+                            index_col=tDF_input_index_col, low_memory=False) 
                              ## Your input file is brought into memory here
 
         ## process input file into correct number of output files
         rowCnt = len(self.tmpDF)
         print("Your file has ", str(rowCnt), " rows excluding the header row.")
-        if tDF2_index_label == True:
-            print("The DF Index will be output giving each data row a unique number starting at 0.") 
-            print("To exclude these numbers, set index_labels to False (recommended if files will be imported to R).")
+        if tDF_output_index == True:
+            print("The DF Index will be output giving each data row an index field value.") 
+            if self.args.input_index == False:
+                print("Since an index was not imported with the data, the index will be sequential starting with 0.")
+            print("To exclude these numbers, set --output_index to False (recommended if files will be imported to R).")
 
         dataSets = int(round(rowCnt/numRows,0))
         if dataSets * numRows < rowCnt:
@@ -66,7 +74,6 @@ class CsvSplitterAbs(object, metaclass=ABCMeta):
         innerStart = 0
         for i in range(0, dataSets): 
             filename = fileStart + str(i+1) + ".csv"
-            print("Building File ", str(i+1), ": ", filename)
             # tmpDF2 = pd.DataFrame()  ## delete me after first successful test
             # print("Loop Range:", innerStart, ":", rowCnt)
             for j in range (innerStart, rowCnt):
@@ -74,17 +81,22 @@ class CsvSplitterAbs(object, metaclass=ABCMeta):
                     # print("j: ", j)
                     innerStart = j
                     break 
+
                 self.tmpDF2 = self.tmpDF2.append(self.tmpDF[j:j+1])
+            print("Building File ", str(i+1), ": ", filename, " with row count of: ", str(len(self.tmpDF2)))
 
             self._changeOutFiles_()  ## abstract method footprint
                                      ## allows this code to be expanded to operate on each subfile ahead of output
 
-            self.tmpDF2.to_csv(filename, index=tDF2_index_label)  # index_label
-            self.tmpDF2 = pd.DataFrame()  ## teset tmpDF2 for next file
+            self.tmpDF2.to_csv(filename, index=tDF_output_index)  # index_label
+            self.tmpDF2 = pd.DataFrame()  ## reset tmpDF2 for next file
         print("Files Ready.")
 
     @abstractmethod
     def _changeOutFiles_(): pass
+
+    def codeVersion(self):
+        print("This code was written in Python ", self.pyVer)
 
 class CsvSplitter(CsvSplitterAbs):
     def __init__(self):           
@@ -100,6 +112,7 @@ class CsvSplitter(CsvSplitterAbs):
 def main():
     csvFileSplitter = CsvSplitter()
     csvFileSplitter.split_file()
+    csvFileSplitter.codeVersion()
 
 if __name__ == '__main__':
     main()
