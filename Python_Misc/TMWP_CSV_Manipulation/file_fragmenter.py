@@ -62,7 +62,7 @@ class CsvSplitterAbs(object, metaclass=ABCMeta):
             print("The DF Index will be output giving each data row an index field value.") 
             if self.args.input_index == False:
                 print("Since an index was not imported with the data, the index will be sequential starting with 0.")
-            print("To exclude these numbers, set --output_index to False (recommended if files will be imported to R).")
+            print("To exclude the index on output, do not set the --output_index (-odx) argument (recommended if files will be imported to R).")
 
         dataSets = int(round(rowCnt/numRows,0))
         if dataSets * numRows < rowCnt:
