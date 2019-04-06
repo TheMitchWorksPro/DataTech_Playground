@@ -6,7 +6,7 @@ This folder is evolving as a kind of subject within "DataTech_Playground".  Code
 Points of interest and/or just some explanations of what is in here:
 
 + [/data/](./data/) - data used to test other code or referenced in notebooks in this folder
-+ Working with CSVs (usually using Pandas)
++ __Working with CSVs (usually using Pandas):__
   + [TMWP_DFBuilder_OO_PY/](./TMWP_DFBuilder_OO_PY/) - 
     + reusable objects for scanning a large data csv, and adding it to a dataframe a small number of rows at a time (saving the results as it builds)
     + child object using `requests` library to illustrate how this allows you to make web calls and not lose the results if an error is encountered while enriching a large CSV with data obtained from the web
