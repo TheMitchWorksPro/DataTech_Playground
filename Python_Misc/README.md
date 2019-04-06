@@ -1,6 +1,6 @@
 ### About Python_Misc
 
-This folder is evolving as a kind of subject within "DataTech_Playground".  Code here has the potential to be useful either as coding samples of more advanced concepts than found in "Python_Basic", or actual code and reusable code that can be a starting point for real pythonic solutions.
+This folder is evolving as a kind of subproject within "DataTech_Playground".  Code here has the potential to be useful either as coding samples of more advanced concepts than found in "Python_Basic", or actual code and reusable code that can be a starting point for real pythonic solutions.
 
 ### Points of Interest
 Points of interest and/or just some explanations of what is in here:
