@@ -23,3 +23,8 @@ Points of interest and/or just some explanations of what is in here:
   + [TMWP_PY_NormDistrProb_Code.ipynb](./TMWP_PY_NormDistrProb_Code.ipynb) - Object to build a normal distribution from simple data; Organizes someone else's nice implementation into object code.
   + [TMWP_dictionary_manipulation.py](./TMWP_dictionary_manipulation.py) - functions for working with dictionaries
   + [TMWP_string_and_array_functions.py](./TMWP_string_and_array_functions.py) - code for manipulating strings and arrays; includes: code to convert a windows URL string to an online string, create a list of words from a string, and many more ...
+
+
+## Reference Topics
+
++ [Arg Parser](https://docs.python.org/3.6/library/argparse.html?highlight=argparse#module-argparse) used in CSV Manipulation Code
